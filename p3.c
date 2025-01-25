@@ -1,16 +1,20 @@
 #include<stdio.h>
 void main(){
-    int num,num2;
-    printf("enter the num: ");
-    scanf("%d",&num);
-    
-    if(num>0 ){
-        printf("number is positive");
-
+    int hour;
+    printf("enter the hour: ");
+    scanf("%d",&hour);
+   
+    if(hour<12 && hour >77 ){
+        printf("good morning");
     }
-    if(num<0 ){
-        printf("number is negaitive");
-
+    if(hour>=12 && hour<18 ){
+        printf("good afternoon");
     }
-
+    if(hour>18 && hour<23){
+        printf("good evening");
+    }
+    if(hour>=23 || hour <7){
+        printf("good night");
+    }
+   
 }
