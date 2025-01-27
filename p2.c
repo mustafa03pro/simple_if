@@ -1,19 +1,20 @@
 #include<stdio.h>
 void main(){
-    int num1,num2,num3;
-    printf("enter the num1: ");
-    scanf("%d",&num1);
-    printf("enter the num1: ");
-    scanf("%d",&num2);
-    printf("enter the num1: ");
-    scanf("%d",&num3);
-    if(num1>num2 && num1>num3){
-        printf("num1 is grateer %d",num1);
+    int item=100,costc,selling,profit,totalprofit,totalloss;
+    printf("Enter the costc: ");
+    scanf("%d",&costc);
+    printf("Enter the selling: ");
+    scanf("%d",&selling);
+    totalprofit=(selling-costc)*100;
+    totalloss=(costc-selling)*100;
+    
+    if(costc>=50 && selling==60){
+        printf("The cost:%d and selling=%d",costc,selling);
+        printf("The totalprofit=%d",totalprofit);
     }
-    if(num2>num1 && num2>num3){
-        printf("num2 is grateer %d",num2);
+    else if(costc>=50 && selling<=45){
+        printf(" The cost prize = %d and sellinf prize = %d.",costc,selling);
+        printf(" The totalloss = %d ",totalloss);
     }
-    else{
-         printf("num3 is grateer %d",num3);
-    }
+    
 }
