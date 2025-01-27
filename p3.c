@@ -1,20 +1,27 @@
 #include<stdio.h>
 void main(){
-    int hour;
-    printf("enter the hour: ");
-    scanf("%d",&hour);
+    int hindi,telugu,eng,math,comp,percentage,grade;
+    printf("Enter the hindi marks: ");
+    scanf("%d",&hindi);
+    printf("Enter the telugu marks: ");
+    scanf("%d",&telugu);
+    printf("Enter the eng marks: ");
+    scanf("%d",&eng);
+    printf("Enter the math marks: ");
+    scanf("%d",&math);
+    printf("Enter the comp marks: ");
+    scanf("%d",&comp);
+    percentage=((hindi+telugu+eng+math+comp)/5);
    
-    if(hour<12 && hour >77 ){
-        printf("good morning");
+    if(percentage>=90){
+        printf("%dGrade - A",percentage);
     }
-    if(hour>=12 && hour<18 ){
-        printf("good afternoon");
+    else if(percentage<90 &&percentage>75){
+        printf(" Grade - B");
     }
-    if(hour>18 && hour<23){
-        printf("good evening");
+    else if(percentage<=75 && percentage>=35){
+        printf("Grade - C");
     }
-    if(hour>=23 || hour <7){
-        printf("good night");
-    }
-   
+    else
+    puts("fail");
 }
